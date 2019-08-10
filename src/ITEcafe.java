@@ -74,7 +74,7 @@ public class ITEcafe {
             num = Integer.parseInt(input);
             
             if(num == 2){
-                break;1
+                break;
             }
         }
 
