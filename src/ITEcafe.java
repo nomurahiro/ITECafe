@@ -5,11 +5,6 @@ import java.util.Scanner;
 
 public class ITEcafe {
 
-    /**
-     *
-     * @param args the command line arguments
-     *
-     */
     public static void main(String[] args) {
 
         //商品の準備
@@ -33,16 +28,7 @@ public class ITEcafe {
 
         Item meatPasta = new Item(10, "ミートパスタ", 650);
 
-        Item mixPizza = new Item(11, "ミックスピザ", 700);
-
-        Item croissant = new Item(12, "クロワッサン", 180);
-
-        Item toastSandwich = new Item(13, "トーストサンド", 200);
-
-        Item frenchToast = new Item(14, "フレンチトースト", 210);
-
-        // 今回はItemを配列に入れて処理することにする　> 商品は14個なので14個のサイズの配列を作成しておく
-        Item[] items = new Item[14];
+        Item[] items = new Item[10];
 
         items[0] = hotcoffee;
 
@@ -64,13 +50,6 @@ public class ITEcafe {
 
         items[9] = meatPasta;
 
-        items[10] = mixPizza;
-
-        items[11] = croissant;
-
-        items[12] = toastSandwich;
-
-        items[13] = frenchToast;
 
         // 買い物かご
         ItemKago kago = new ItemKago();
@@ -138,11 +117,11 @@ public class ITEcafe {
 
                     System.out.println("------------------------------");
 
-                    System.out.print("お会計=(k)aikei / 継続入力(n)ext：");
+                    System.out.print("お会計= y / 継続入力 n：");
 
                     String inputChar = sc.next();
 
-                    if (inputChar.charAt(0) == 'k') {
+                    if (inputChar.charAt(0) == 'y') {
 
                         break;
 
@@ -168,7 +147,7 @@ public class ITEcafe {
 
                 System.out.println("-------------------------------");
 
-                System.out.print("以上で宜しいですか？=(y)es / 取り消し=(c)ancel : ");
+                System.out.print("以上で宜しいですか？= y / 取り消し= n : ");
 
                 String inputChar = sc.next();
 
@@ -176,7 +155,7 @@ public class ITEcafe {
 
                     break;
 
-                } else if (inputChar.charAt(0) == 'c') {
+                } else if (inputChar.charAt(0) == 'n') {
 
                     // 合計金額を0にする
                     goukeiKin = 0;
